@@ -33,7 +33,7 @@ fi
     dirDefault=/opt/InstaladorMAPOS
     urlXampp="https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.12/xampp-linux-x64-8.2.12-0-installer.run/download"
     dirXampp=/opt/lampp
-    dirMaposConfig=/opt/lampp/htdocs/mapos/application/.env
+    dirMaposConfig=/opt/lampp/htdocs/evolus/application/.env
     dirHtdocs=/opt/lampp/htdocs
     dirMySQL=/opt/lampp/bin/mysql
 # <=== Fim SET Diretorios ===>
@@ -146,9 +146,9 @@ fi
         echo "* Baixando a ultima versao do projeto."
 
         if [ "$downMapos" = "release" ]; then
-            wget --quiet --show-progress -O $dirDefault/MapOS.zip $(curl -s https://api.github.com/repos/RamonSilva20/mapos/releases/latest | grep "zipball_url" | awk -F\" '{print $4}')
+            wget --quiet --show-progress -O $dirDefault/MapOS.zip $(curl -s https://api.github.com/repos/RamonSilva20/evolus/releases/latest | grep "zipball_url" | awk -F\" '{print $4}')
         elif [ "$downMapos" = "master" ]; then
-            wget --quiet --show-progress -O $dirDefault/MapOS.zip https://github.com/RamonSilva20/mapos/archive/refs/heads/master.zip
+            wget --quiet --show-progress -O $dirDefault/MapOS.zip https://github.com/RamonSilva20/evolus/archive/refs/heads/master.zip
         fi
         echo
         echo "* Extraindo projeto."
@@ -156,14 +156,14 @@ fi
         mv -i $dirHtdocs/*mapos* $dirHtdocs/mapos
         echo
         echo "* Atribuindo permissões."
-        sudo chmod 777 $dirHtdocs/mapos/updates/
-        sudo chmod 777 $dirHtdocs/mapos/application/
-        sudo chmod 777 $dirHtdocs/mapos/index.php
-        sudo chmod 777 $dirHtdocs/mapos/application/config/config.php
-        sudo chmod 777 $dirHtdocs/mapos/application/config/database.php
-        sudo chmod 777 $dirHtdocs/mapos/application/config/.env
-        sudo chmod 777 $dirHtdocs/mapos/application/config/.env.example
-        sudo rm -f $dirHtdocs/mapos/.htaccess
+        sudo chmod 777 $dirHtdocs/evolus/updates/
+        sudo chmod 777 $dirHtdocs/evolus/application/
+        sudo chmod 777 $dirHtdocs/evolus/index.php
+        sudo chmod 777 $dirHtdocs/evolus/application/config/config.php
+        sudo chmod 777 $dirHtdocs/evolus/application/config/database.php
+        sudo chmod 777 $dirHtdocs/evolus/application/config/.env
+        sudo chmod 777 $dirHtdocs/evolus/application/config/.env.example
+        sudo rm -f $dirHtdocs/evolus/.htaccess
         echo
         echo "* Criando banco de dados."
         $dirMySQL -u root -e "CREATE DATABASE mapos;"
@@ -184,7 +184,7 @@ fi
     fi
     echo
     echo "* Verificando complemento"
-    if [ -f "$dirHtdocs/mapos/application/vendor" ]
+    if [ -f "$dirHtdocs/evolus/application/vendor" ]
     then
         echo "* Complementos ja instalados."
     else
@@ -197,7 +197,7 @@ fi
 # <=== Inicio Configuração pelo Browser ===>
     clear
     echo "# CONFIGURANDO MAPOS..."
-    echo "Acesse o Map-OS via navegador http://localhost/mapos/install"
+    echo "Acesse o Map-OS via navegador http://localhost/evolus/install"
     echo "Clique me PROXIMO e insira os dados abaixo:"
     echo
     echo "Host: localhost"
@@ -209,7 +209,7 @@ fi
     echo Email: "Informe seu E-mail para Login"
     echo Senha: "Insira sua senha para acesso"
     echo
-    echo "URL: http://localhost/mapos/"
+    echo "URL: http://localhost/evolus/"
     echo
     echo "Obs: Caso a instalacao nao tenha sido bem sucedida, encerre o script e execute novamente."
     read -p "Gostaria de realizar a configuracao personalizada? (S/N)" resposta
@@ -258,8 +258,8 @@ fi
             echo "* Nao configurado disparo automatico."
         elif [ "$resposta" = "S" ] || [ "$resposta" = "s" ]; then
             echo "* Disparo automatico configurado com sucesso."
-            (crontab -l ; echo "*/2 * * * * php $dirHtdocs/mapos/index.php email/process") | crontab -
-            (crontab -l ; echo "*/5 * * * * php $dirHtdocs/mapos/index.php email/retry") | crontab -
+            (crontab -l ; echo "*/2 * * * * php $dirHtdocs/evolus/index.php email/process") | crontab -
+            (crontab -l ; echo "*/5 * * * * php $dirHtdocs/evolus/index.php email/retry") | crontab -
         fi
     # <=== Fim Configuracao da Cron ===>
 

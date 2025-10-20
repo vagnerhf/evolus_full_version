@@ -30,7 +30,7 @@
 ![executar-xampp-ok](https://user-images.githubusercontent.com/17226802/82738728-563b8400-9d10-11ea-9e95-b0e2d8bf3390.jpg)
 
 
-3. AGORA BAIXE O MAPOS ATRAVÉS DO LINK: https://github.com/RamonSilva20/mapos/releases
+3. AGORA BAIXE O MAPOS ATRAVÉS DO LINK: https://github.com/RamonSilva20/evolus/releases
 
 ![mapos-down](https://user-images.githubusercontent.com/17226802/82736980-e9ba8800-9d03-11ea-8bf3-d3c10debd8c1.jpg)
 
@@ -61,7 +61,7 @@
 ![bd-mapos](https://user-images.githubusercontent.com/17226802/82737644-da8a0900-9d08-11ea-9b47-321843078ef5.jpg)
 
 
-9. APÓS BD CRIADO ACESSAR LINK `http://localhost/mapos/` E APERTAR **ENTER** A URL MUDARA PARA `http://localhost/mapos/install/index.php` NESSA TELA DE INSTALAÇÃO SO CLICAR EM **PRÓXIMO**
+9. APÓS BD CRIADO ACESSAR LINK `http://localhost/evolus/` E APERTAR **ENTER** A URL MUDARA PARA `http://localhost/evolus/install/index.php` NESSA TELA DE INSTALAÇÃO SO CLICAR EM **PRÓXIMO**
 
 ![install-mapos-inicio](https://user-images.githubusercontent.com/17226802/82737718-6c921180-9d09-11ea-8d12-f63aaea2266d.jpg)
 
@@ -76,7 +76,7 @@
 ![install-mapos-full](https://user-images.githubusercontent.com/17226802/82737956-c3e4b180-9d0a-11ea-9660-16753ca1da94.jpg)
 
 
-12. IRA PARA A PAGINA DE LOGIN `http://localhost/mapos/index.php/login` ONDE O EMAIL FOI **ADMIN@ADMIN.COM** E SENHA **123456**, _LEMBRANDO QUE AS CREDENCIAS FICAM A SUA ESCOLHA NA HORA DA CONFIGURAÇÃO, ESSAS FORAM AS QUE ESCOLHE PARA ESSE EXEMPLO._
+12. IRA PARA A PAGINA DE LOGIN `http://localhost/evolus/index.php/login` ONDE O EMAIL FOI **ADMIN@ADMIN.COM** E SENHA **123456**, _LEMBRANDO QUE AS CREDENCIAS FICAM A SUA ESCOLHA NA HORA DA CONFIGURAÇÃO, ESSAS FORAM AS QUE ESCOLHE PARA ESSE EXEMPLO._
 
 ![primeiro-acesso](https://user-images.githubusercontent.com/17226802/82738082-9815fb80-9d0b-11ea-8227-d7c2c82b12a3.jpg)
 

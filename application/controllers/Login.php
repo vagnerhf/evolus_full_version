@@ -5,12 +5,12 @@ class Login extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('mapos_model');
+        $this->load->model('evolus_model');
     }
 
     public function index()
     {
-        $this->load->view('mapos/login');
+        $this->load->view('evolus/login');
     }
 
     public function sair()

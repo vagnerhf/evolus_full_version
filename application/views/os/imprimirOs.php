@@ -18,7 +18,7 @@
             <header>
                 <?php if ($emitente == null) : ?>
                     <div class="alert alert-danger" role="alert">
-                        Você precisa configurar os dados do emitente. >>> <a href="<?=base_url()?>index.php/mapos/emitente">Configurar</a>
+                        Você precisa configurar os dados do emitente. >>> <a href="<?=base_url()?>index.php/evolus/emitente">Configurar</a>
                     </div>
                 <?php else : ?>
                     <div class="imgLogo" class="align-middle">
@@ -270,7 +270,7 @@
                 <header>
                     <?php if ($emitente == null) : ?>
                         <div class="alert alert-danger" role="alert">
-                            Você precisa configurar os dados do emitente. >>> <a href="<?=base_url()?>index.php/mapos/emitente">Configurar</a>
+                            Você precisa configurar os dados do emitente. >>> <a href="<?=base_url()?>index.php/evolus/emitente">Configurar</a>
                         </div>
                     <?php else : ?>
                         <div class="imgLogo" class="align-middle">
@@ -525,7 +525,7 @@
                 <header style="border: 1px solid #cdcdcd">
                     <?php if ($emitente == null) : ?>
                         <div class="alert alert-danger" role="alert">
-                            Você precisa configurar os dados do emitente. >>> <a href="<?= base_url() ?>index.php/mapos/emitente">Configurar</a>
+                            Você precisa configurar os dados do emitente. >>> <a href="<?= base_url() ?>index.php/evolus/emitente">Configurar</a>
                         </div>
                     <?php else : ?>
                         <div id="imgLogo" class="align-middle">

@@ -1244,7 +1244,7 @@
             dayMaxEvents: true, // allow "more" link when too many events
             displayEventTime: false,
             events: {
-                url: "<?= base_url() . "index.php/mapos/calendario"; ?>",
+                url: "<?= base_url() . "index.php/evolus/calendario"; ?>",
                 method: 'GET',
                 extraParams: function() { // a function that returns an object
                     return {

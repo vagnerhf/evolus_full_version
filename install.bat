@@ -161,10 +161,10 @@ ECHO - Verificando MapOS GitHUB
 IF EXIST "%dirDefault%\MapOS.zip" GOTO etapa0
 IF %downMapos%==master (
     ECHO - Baixando a versao MASTER
-    PowerShell -command "& { iwr https://github.com/RamonSilva20/mapos/archive/refs/heads/master.zip -OutFile %dirDefault%\MapOS.zip }"
+    PowerShell -command "& { iwr https://github.com/RamonSilva20/evolus/archive/refs/heads/master.zip -OutFile %dirDefault%\MapOS.zip }"
 ) ELSE (
     ECHO - Baixando a versao RELEASE
-    FOR /F "eol= tokens=2 delims=, " %%A IN (' cURL -s https://api.github.com/repos/RamonSilva20/mapos/releases/latest ^| findstr /I /C:"zipball_url" ') DO PowerShell -command "& { iwr %%A -OutFile %dirDefault%\MapOS.zip }"
+    FOR /F "eol= tokens=2 delims=, " %%A IN (' cURL -s https://api.github.com/repos/RamonSilva20/evolus/releases/latest ^| findstr /I /C:"zipball_url" ') DO PowerShell -command "& { iwr %%A -OutFile %dirDefault%\MapOS.zip }"
 )
 GOTO etapa0
 :: <=== Fim Download de Dependências ===>
@@ -249,9 +249,9 @@ ECHO Nome: "Digite seu Nome Completo"
 ECHO Email: "Informe seu E-mail para Login"
 ECHO Senha: "Insira sua senha para acesso"
 ECHO.
-ECHO URL: http://localhost/mapos/
+ECHO URL: http://localhost/evolus/
 TIMEOUT /T 5 >NUL
-start /B http://localhost/mapos/install
+start /B http://localhost/evolus/install
 ECHO.
 ECHO Obs: Caso a instalacao nao tenha sido bem sucedida, encerre o script e execute novamente.
 CHOICE /C SN /M "A instalacao foi bem sucedida?"

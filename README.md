@@ -1,5 +1,5 @@
 
-![MapOS](https://raw.githubusercontent.com/RamonSilva20/mapos/master/assets/img/logo.png)
+![MapOS](https://raw.githubusercontent.com/RamonSilva20/evolus/master/assets/img/logo.png)
 
 ![version](https://img.shields.io/badge/version-4.52.0-blue.svg?longCache=true&style=flat-square)
 ![license](https://img.shields.io/badge/license-Apache-green.svg?longCache=true&style=flat-square)
@@ -8,9 +8,9 @@
 ![contributors](https://img.shields.io/github/contributors/RamonSilva20/mapos.svg?longCache=true&style=flat-square)
 
 ### Contato: contato@mapos.com.br
-### [Feedback](https://github.com/RamonSilva20/mapos/discussions) - Vote ou sugira melhorias
+### [Feedback](https://github.com/RamonSilva20/evolus/discussions) - Vote ou sugira melhorias
 
-![Map-OS](https://raw.githubusercontent.com/RamonSilva20/mapos/master/docs/dashboard.png)
+![Map-OS](https://raw.githubusercontent.com/RamonSilva20/evolus/master/docs/dashboard.png)
 
 ### [Instalação](Instalacao_xampp_windows.md)
 
@@ -57,13 +57,13 @@ URL: http://localhost:8000/
 Tutorial Instalação: [https://youtu.be/NgXzzBB_2bM?si=FS_R2xq_W0Jnfn33](https://www.youtube.com/watch?v=aZE-LW_YOE4)
 #### Windows 10/11
 1. Execute o Prompt de Comando ou PowerShell como Administrador;
-2. Execute o comando: `PowerShell -command "& { iwr https://raw.githubusercontent.com/RamonSilva20/mapos/master/install.bat -OutFile MapOS_Install.bat }; .\MapOS_Install.bat"`
+2. Execute o comando: `PowerShell -command "& { iwr https://raw.githubusercontent.com/RamonSilva20/evolus/master/install.bat -OutFile MapOS_Install.bat }; .\MapOS_Install.bat"`
 3. Siga as instrunções na tela.
 
 #### Linux (Ubuntu/Debian)
 1. Abra o Terminal ou acesse seu servidor via SSH;
 2. Eleve o privilégio aplicando `sudo su` (Recomendado);
-3. Execute o comando: `curl -o MapOS_Install.sh -L https://raw.githubusercontent.com/RamonSilva20/mapos/master/install.sh && chmod +x MapOS_Install.sh && ./MapOS_Install.sh`
+3. Execute o comando: `curl -o MapOS_Install.sh -L https://raw.githubusercontent.com/RamonSilva20/evolus/master/install.sh && chmod +x MapOS_Install.sh && ./MapOS_Install.sh`
 4. Siga as instruções na tela.
 
 ### Atualização
@@ -134,7 +134,7 @@ Doações podem ser realizadas nos links:
 [![Estrelas](https://api.star-history.com/svg?repos=RamonSilva20/mapos&type=Date)](https://star-history.com/#RamonSilva20/mapos&Date)
 
 ### Contribuidores
-[![Contribuidores](https://contrib.rocks/image?repo=RamonSilva20/mapos)](https://github.com/RamonSilva20/mapos/graphs/contributors)
+[![Contribuidores](https://contrib.rocks/image?repo=RamonSilva20/mapos)](https://github.com/RamonSilva20/evolus/graphs/contributors)
 
 ## Autor
 | [<img src="https://avatars.githubusercontent.com/RamonSilva20?s=115"><br><sub>Ramon Silva</sub>](https://github.com/RamonSilva20) |

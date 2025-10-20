@@ -541,7 +541,7 @@
         <div class="modal-body">
             <h5 style="text-align: left">Deseja realmente fazer a atualização do banco de dados?</h5>
             <h7 style="text-align: left">Recomendamos que faça um backup antes de prosseguir!
-                <a target="_blank" title="Fazer Bakup" class="btn btn-mini btn-inverse" href="<?php echo site_url() ?>/mapos/backup">Fazer Backup</a>
+                <a target="_blank" title="Fazer Bakup" class="btn btn-mini btn-inverse" href="<?php echo site_url() ?>/evolus/backup">Fazer Backup</a>
             </h7>
         </div>
         <div class="modal-footer" style="display:flex;justify-content: center">
@@ -552,10 +552,10 @@
 </div>
 <script>
     $('#update-database').click(function() {
-        window.location = "<?= site_url('mapos/atualizarBanco') ?>"
+        window.location = "<?= site_url('evolus/atualizarBanco') ?>"
     });
     $('#update-mapos').click(function() {
-        window.location = "<?= site_url('mapos/atualizarMapos') ?>"
+        window.location = "<?= site_url('evolus/atualizarMapos') ?>"
     });
     $(document).ready(function() {
         $('#notifica_whats_select').change(function() {

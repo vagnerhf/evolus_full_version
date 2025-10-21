@@ -3,28 +3,28 @@ class Evolus extends MY_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('mapos_model');
+        $this->load->model('evolus_model');
     }
 
     public function index()
     {
         $status = array('Em Andamento', 'Aguardando Peças');
-        $this->data['ordens_status'] = $this->mapos_model->getOsStatus($status);
+        $this->data['ordens_status'] = $this->evolus_model->getOsStatus($status);
         $vstatus = array('Aberto', 'Em Andamento', 'Aguardando Peças', 'Aprovado', 'Orçamento');
-        $this->data['vendasstatus'] = $this->mapos_model->getVendasStatus($vstatus);
-        $this->data['lancamentos'] = $this->mapos_model->getLancamentos();
-        $this->data['ordens_orcamentos'] = $this->mapos_model->getOsOrcamentos();
-        $this->data['ordens_abertas'] = $this->mapos_model->getOsAbertas();
-        $this->data['ordens_aprovadas'] = $this->mapos_model->getOsAprovadas();
-        $this->data['ordens_finalizadas'] = $this->mapos_model->getOsFinalizadas();
-        $this->data['ordens_aguardando'] = $this->mapos_model->getOsAguardandoPecas();
-        $this->data['ordens_andamento'] = $this->mapos_model->getOsAndamento();
-        $this->data['produtos'] = $this->mapos_model->getProdutosMinimo();
-        $this->data['os'] = $this->mapos_model->getOsEstatisticas();
-        $this->data['estatisticas_financeiro'] = $this->mapos_model->getEstatisticasFinanceiro();
-        $this->data['financeiro_mes_dia'] = $this->mapos_model->getEstatisticasFinanceiroDia($this->input->get('year'));
-        $this->data['financeiro_mes'] = $this->mapos_model->getEstatisticasFinanceiroMes($this->input->get('year'));
-        $this->data['financeiro_mesinadipl'] = $this->mapos_model->getEstatisticasFinanceiroMesInadimplencia($this->input->get('year'));
+        $this->data['vendasstatus'] = $this->evolus_model->getVendasStatus($vstatus);
+        $this->data['lancamentos'] = $this->evolus_model->getLancamentos();
+        $this->data['ordens_orcamentos'] = $this->evolus_model->getOsOrcamentos();
+        $this->data['ordens_abertas'] = $this->evolus_model->getOsAbertas();
+        $this->data['ordens_aprovadas'] = $this->evolus_model->getOsAprovadas();
+        $this->data['ordens_finalizadas'] = $this->evolus_model->getOsFinalizadas();
+        $this->data['ordens_aguardando'] = $this->evolus_model->getOsAguardandoPecas();
+        $this->data['ordens_andamento'] = $this->evolus_model->getOsAndamento();
+        $this->data['produtos'] = $this->evolus_model->getProdutosMinimo();
+        $this->data['os'] = $this->evolus_model->getOsEstatisticas();
+        $this->data['estatisticas_financeiro'] = $this->evolus_model->getEstatisticasFinanceiro();
+        $this->data['financeiro_mes_dia'] = $this->evolus_model->getEstatisticasFinanceiroDia($this->input->get('year'));
+        $this->data['financeiro_mes'] = $this->evolus_model->getEstatisticasFinanceiroMes($this->input->get('year'));
+        $this->data['financeiro_mesinadipl'] = $this->evolus_model->getEstatisticasFinanceiroMesInadimplencia($this->input->get('year'));
         $this->data['menuPainel'] = 'Painel';
         $this->data['view'] = 'evolus/painel';
 
@@ -33,7 +33,7 @@ class Evolus extends MY_Controller {
 
     public function minhaConta()
     {
-        $this->data['usuario'] = $this->mapos_model->getById($this->session->userdata('id_admin'));
+        $this->data['usuario'] = $this->evolus_model->getById($this->session->userdata('id_admin'));
         $this->data['view'] = 'evolus/minhaConta';
 
         return $this->layout();
@@ -41,7 +41,7 @@ class Evolus extends MY_Controller {
 
     public function alterarSenha()
     {
-        $current_user = $this->mapos_model->getById($this->session->userdata('id_admin'));
+        $current_user = $this->evolus_model->getById($this->session->userdata('id_admin'));
 
         if (!$current_user) {
             $this->session->set_flashdata('error', 'Ocorreu um erro ao pesquisar usuário!');
@@ -56,7 +56,7 @@ class Evolus extends MY_Controller {
             redirect(site_url('evolus/minhaConta'));
         }
 
-        $result = $this->mapos_model->alterarSenha($senha);
+        $result = $this->evolus_model->alterarSenha($senha);
 
         if ($result) {
             $this->session->set_flashdata('success', 'Senha alterada com sucesso!');
@@ -71,7 +71,7 @@ class Evolus extends MY_Controller {
     {
         $termo = $this->input->get('termo');
 
-        $data['results'] = $this->mapos_model->pesquisar($termo);
+        $data['results'] = $this->evolus_model->pesquisar($termo);
         $this->data['produtos'] = $data['results']['produtos'];
         $this->data['servicos'] = $data['results']['servicos'];
         $this->data['os'] = $data['results']['os'];
@@ -114,7 +114,7 @@ class Evolus extends MY_Controller {
         }
 
         $this->data['menuConfiguracoes'] = 'Configuracoes';
-        $this->data['dados'] = $this->mapos_model->getEmitente();
+        $this->data['dados'] = $this->evolus_model->getEmitente();
         $this->data['view'] = 'evolus/emitente';
 
         return $this->layout();
@@ -230,7 +230,7 @@ class Evolus extends MY_Controller {
             $image = $this->do_upload();
             $logo = base_url() . 'assets/uploads/' . $image;
 
-            $retorno = $this->mapos_model->addEmitente($nome, $cnpj, $ie, $cep, $logradouro, $numero, $bairro, $cidade, $uf, $telefone, $email, $logo);
+            $retorno = $this->evolus_model->addEmitente($nome, $cnpj, $ie, $cep, $logradouro, $numero, $bairro, $cidade, $uf, $telefone, $email, $logo);
             if ($retorno) {
                 $this->session->set_flashdata('success', 'As informações foram inseridas com sucesso.');
                 log_info('Adicionou informações de emitente.');
@@ -278,7 +278,7 @@ class Evolus extends MY_Controller {
             $email = $this->input->post('email');
             $id = $this->input->post('id');
 
-            $retorno = $this->mapos_model->editEmitente($id, $nome, $cnpj, $ie, $cep, $logradouro, $numero, $bairro, $cidade, $uf, $telefone, $email);
+            $retorno = $this->evolus_model->editEmitente($id, $nome, $cnpj, $ie, $cep, $logradouro, $numero, $bairro, $cidade, $uf, $telefone, $email);
             if ($retorno) {
                 $this->session->set_flashdata('success', 'As informações foram alteradas com sucesso.');
                 log_info('Alterou informações de emitente.');
@@ -307,7 +307,7 @@ class Evolus extends MY_Controller {
         $image = $this->do_upload();
         $logo = base_url() . 'assets/uploads/' . $image;
 
-        $retorno = $this->mapos_model->editLogo($id, $logo);
+        $retorno = $this->evolus_model->editLogo($id, $logo);
         if ($retorno) {
             $this->session->set_flashdata('success', 'As informações foram alteradas com sucesso.');
             log_info('Alterou a logomarca do emitente.');
@@ -330,7 +330,7 @@ class Evolus extends MY_Controller {
             redirect(site_url('evolus/minhaConta'));
         }
 
-        $usuario = $this->mapos_model->getById($id);
+        $usuario = $this->evolus_model->getById($id);
 
         if (is_file(FCPATH . 'assets/userImage/' . $usuario->url_image_user)) {
             unlink(FCPATH . 'assets/userImage/' . $usuario->url_image_user);
@@ -338,7 +338,7 @@ class Evolus extends MY_Controller {
 
         $image = $this->do_upload_user();
         $imageUserPath = $image;
-        $retorno = $this->mapos_model->editImageUser($id, $imageUserPath);
+        $retorno = $this->evolus_model->editImageUser($id, $imageUserPath);
 
         if ($retorno) {
             $this->session->set_userdata('url_image_user', $imageUserPath);
@@ -405,7 +405,7 @@ class Evolus extends MY_Controller {
         $this->data['menuConfiguracoes'] = 'Sistema';
 
         $this->load->library('form_validation');
-        $this->load->model('mapos_model');
+        $this->load->model('evolus_model');
 
         $this->data['custom_error'] = '';
 
@@ -477,7 +477,7 @@ class Evolus extends MY_Controller {
                 'os_status_list' => json_encode($this->input->post('os_status_list')),
                 'control_2vias' => $this->input->post('control_2vias'),
             ];
-            if ($this->mapos_model->saveConfiguracao($data) == true) {
+            if ($this->evolus_model->saveConfiguracao($data) == true) {
                 $this->session->set_flashdata('success', 'Configurações do sistema atualizadas com sucesso!');
                 redirect(site_url('evolus/configurar'));
             } else {
@@ -545,7 +545,7 @@ class Evolus extends MY_Controller {
         $start = $this->input->get('start') ?: null;
         $end = $this->input->get('end') ?: null;
 
-        $allOs = $this->mapos_model->calendario(
+        $allOs = $this->evolus_model->calendario(
             $start,
             $end,
             $status

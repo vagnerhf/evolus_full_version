@@ -73,13 +73,13 @@
                   <button id="btn-acessar">Acessar</button>
                 </div>
                 <div class="links-uteis"><a href="https://github.com/RamonSilva20/mapos">
-                    <p><?= date('Y'); ?> &copy; Ramon Silva</p>
+                    <p><?= date('Y'); ?> &copy; Compurapido SP</p>
                   </a>
                 </div>
                 <a href="#notification" id="call-modal" role="button" class="btn" data-toggle="modal" style="display: none ">notification</a>
                 <div id="notification" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-header">
-                    <h4 id="myModalLabel">Map-OS</h4>
+                    <h4 id="myModalLabel">EVOLUS</h4>
                   </div>
                   <div class="modal-body">
                     <h5 style="text-align: center" id="message">Os dados de acesso estão incorretos, por favor tente novamente!</h5>
@@ -145,7 +145,7 @@
             dataType: 'json',
             success: function(data) {
                 if (data.result == true) {
-                    window.location.href = "<?= site_url('mapos'); ?>";
+                    window.location.href = "<?= site_url('evolus'); ?>";
                 } else {
                     $('#btn-acessar').removeClass('disabled');
                     $('#progress-acessar').addClass('hide');

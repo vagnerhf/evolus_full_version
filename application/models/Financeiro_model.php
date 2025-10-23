@@ -31,10 +31,8 @@ class Financeiro_model extends CI_Model
 
     public function getTotals($where = '')
     {
-        $this->db->select("
-            SUM(case when tipo = 'despesa' then valor - desconto end) as despesas,
-            SUM(case when tipo = 'receita' then (IF(valor_desconto = 0, valor, valor_desconto)) end) as receitas
-        ");
+        $this->db->select('SUM(CASE WHEN tipo = "despesa" THEN valor - desconto END) as despesas', false);
+        $this->db->select('SUM(CASE WHEN tipo = "receita" THEN (CASE WHEN valor_desconto = 0 THEN valor ELSE valor_desconto END) END) as receitas', false);
         $this->db->from('lancamentos');
 
         if ($where) {
@@ -46,7 +44,7 @@ class Financeiro_model extends CI_Model
 
     public function getEstatisticasFinanceiro2()
     {
-        $sql = "SELECT SUM(CASE WHEN baixado = 1 AND tipo = 'receita' THEN IF(valor_desconto = 0, valor, valor_desconto) END) as total_receita,
+        $sql = "SELECT SUM(CASE WHEN baixado = 1 AND tipo = 'receita' THEN (CASE WHEN valor_desconto = 0 THEN valor ELSE valor_desconto END) END) as total_receita,
                        SUM(CASE WHEN baixado = 1 AND tipo = 'despesa' THEN valor - desconto END) as total_despesa,
                        SUM(CASE WHEN baixado = 1 THEN desconto END) as total_valor_desconto,
                        SUM(CASE WHEN baixado = 0 THEN valor - valor_desconto END) as total_valor_desconto_pendente,

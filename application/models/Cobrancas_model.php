@@ -13,7 +13,7 @@ class Cobrancas_model extends CI_Model
 
     public function get($table, $fields, $where = '', $perpage = 0, $start = 0, $one = false, $array = 'array')
     {
-        $this->db->select($fields, 'vendas.*,os.*');
+        $this->db->select($fields . ', vendas.*, os.*');
         $this->db->from($table);
         $this->db->limit($perpage, $start);
         $this->db->order_by('idCobranca', 'desc');
@@ -40,12 +40,22 @@ class Cobrancas_model extends CI_Model
 
     public function getByOs($id)
     {
-        return $this->db->query("SELECT DISTINCT `cobrancas`.*,`clientes`.*,`os`.* FROM `cobrancas`,`clientes`,`os` WHERE `charge_id` = $id AND `os`.`idOs` = `cobrancas`.`os_id`")->row();
+        $this->db->select('cobrancas.*, clientes.*, os.*');
+        $this->db->from('cobrancas');
+        $this->db->join('clientes', 'clientes.idClientes = cobrancas.clientes_id');
+        $this->db->join('os', 'os.idOs = cobrancas.os_id');
+        $this->db->where('cobrancas.charge_id', $id);
+        return $this->db->get()->row();
     }
 
     public function getByVendas($id)
     {
-        return $this->db->query("SELECT DISTINCT `cobrancas`.*,`clientes`.*,`vendas`.* FROM `cobrancas`,`clientes`,`vendas` WHERE `charge_id` = $id AND `vendas`.`idVendas` = `cobrancas`.`vendas_id`")->row();
+        $this->db->select('cobrancas.*, clientes.*, vendas.*');
+        $this->db->from('cobrancas');
+        $this->db->join('clientes', 'clientes.idClientes = cobrancas.clientes_id');
+        $this->db->join('vendas', 'vendas.idVendas = cobrancas.vendas_id');
+        $this->db->where('cobrancas.charge_id', $id);
+        return $this->db->get()->row();
     }
 
     public function add($table, $data, $returnId = false)

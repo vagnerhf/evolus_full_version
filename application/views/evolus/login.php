@@ -73,7 +73,7 @@
                   <button id="btn-acessar">Acessar</button>
                 </div>
                 <div class="links-uteis"><a href="https://github.com/RamonSilva20/mapos">
-                    <p><?= date('Y'); ?> &copy; Compurapido SP</p>
+                    <p><?= date('Y'); ?> &copy; EVOLUS</p>
                   </a>
                 </div>
                 <a href="#notification" id="call-modal" role="button" class="btn" data-toggle="modal" style="display: none ">notification</a>

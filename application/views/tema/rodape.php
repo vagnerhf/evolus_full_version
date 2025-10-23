@@ -1,7 +1,7 @@
 <div class="row-fluid">
     <div id="footer" class="span12">
         <a class="pecolor" href="" target="_blank">
-            <?= date('Y') ?> &copy; Compurapido SP - EVOLUS - Versão: <?= $this->config->item('app_version') ?>
+            <?= date('Y') ?> &copy; EVOLUS - Versão: <?= $this->config->item('app_version') ?>
         </a>
     </div>
 </div>

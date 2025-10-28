@@ -38,7 +38,7 @@
             </a>
         </li>
     <?php endif ?>
-
+<?php /*
     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vProduto')) : ?>
         <li class="card">
             <a class="cardLink" href="<?= site_url('produtos') ?>">
@@ -52,7 +52,7 @@
             </a>
         </li>
     <?php endif ?>
-
+*/ ?>
     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vServico')) : ?>
         <li class="card">
             <a class="cardLink" href="<?= site_url('servicos') ?>">
@@ -155,7 +155,7 @@
                             <div class="cardName">Clientes</div>
                         </div>
                     </a>
-
+<?php /*
                     <a href="<?php echo base_url(); ?>index.php/produtos/adicionar" class="card tip-top" title="Adicionar Produtos">
                         <div><i class='bx bxs-package iconBx2'></i></div>
                         <div>
@@ -163,7 +163,7 @@
                             <div class="cardName">Produtos</div>
                         </div>
                     </a>
-
+*/ ?>
                     <a href="<?php echo base_url() ?>index.php/servicos/adicionar" class="card tip-top" title="Adicionar serviços">
                         <div><i class='bx bxs-stopwatch iconBx3'></i></div>
                         <div>
@@ -922,7 +922,7 @@
             </table>
         </div>
     </div>
-
+<?php /*
     <div class="widget-box0 widbox-blak">
         <div>
             <h5 class="cardHeader">Status de Vendas</h5>
@@ -1008,7 +1008,7 @@
             </table>
         </div>
     </div>
-
+*/ ?>
     <div class="widget-box0 widbox-blak">
         <div>
             <h5 class="cardHeader">Últimos Lançamentos Pendentes</h5>
@@ -1054,6 +1054,7 @@
     </div>
 
     <div class="AAA">
+<?php /*
         <div class="widget-box0 widbox-blak">
             <div>
                 <h5 class="cardHeader">Produtos Com Estoque Mínimo</h5>
@@ -1109,6 +1110,7 @@
                 </table>
             </div>
         </div>
+ */ ?>
     </div>
                         
 </div>

@@ -45,12 +45,14 @@
                         echo 'active';
                     }; ?>">
                         <a class="tip-bottom" title="" href="<?= site_url('clientes') ?>"><i class='bx bx-user iconX'></i>
-                            <span class="title">Cliente / Fornecedor</span>
+<?php /*                    <span class="title">Cliente / Fornecedor</span> */ ?>
+                            <span class="title">Cliente</span>
+
                             <span class="title-tooltip">Clientes</span>
                         </a>
                     </li>
                 <?php } ?>
-
+<?php /*
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vProduto')) { ?>
                     <li class="<?php if (isset($menuProdutos)) {
                         echo 'active';
@@ -61,7 +63,7 @@
                         </a>
                     </li>
                 <?php } ?>
-
+*/ ?>
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vServico')) { ?>
                     <li class="<?php if (isset($menuServicos)) {
                         echo 'active';
@@ -72,7 +74,7 @@
                         </a>
                     </li>
                 <?php } ?>
-
+<?php /*
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vVenda')) { ?>
                     <li class="<?php if (isset($menuVendas)) {
                         echo 'active';
@@ -83,7 +85,7 @@
                         </a>
                     </li>
                 <?php } ?>
-
+*/ ?>
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vOs')) { ?>
                     <li class="<?php if (isset($menuOs)) {
                         echo 'active';

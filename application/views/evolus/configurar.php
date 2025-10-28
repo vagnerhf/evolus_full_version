@@ -13,7 +13,9 @@
                 <li><a data-toggle="tab" href="#menu2">Produtos</a></li>
                 <li><a data-toggle="tab" href="#menu3">Notificações</a></li>
                 <li><a data-toggle="tab" href="#menu4">Atualizações</a></li>
+<?php /*
                 <li><a data-toggle="tab" href="#menu5">OS</a></li>
+*/ ?>
                 <li><a data-toggle="tab" href="#menu6">API</a></li>
                 <li><a data-toggle="tab" href="#menu7">E-mail</a></li>
             </ul>

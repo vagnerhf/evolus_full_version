@@ -92,8 +92,9 @@
           <ul class="dropdown-menu">
             <li><a href="<?= site_url('relatorios/clientes') ?>">Clientes</a></li>
             <li><a href="<?= site_url('relatorios/produtos') ?>">Produtos</a></li>
-            <li><a href="<?= site_url('relatorios/servicos') ?>">Serviços</a></li>
+ <?php /*           <li><a href="<?= site_url('relatorios/servicos') ?>">Serviços</a></li>
             <li><a href="<?= site_url('relatorios/os') ?>">Ordens de Serviço</a></li>
+*/ ?>
             <li><a href="<?= site_url('relatorios/vendas') ?>">Vendas</a></li>
             <li><a href="<?= site_url('relatorios/financeiro') ?>">Financeiro</a></li>
             <li><a href="<?= site_url('relatorios/sku') ?>">SKU</a></li>

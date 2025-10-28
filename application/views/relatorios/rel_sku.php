@@ -50,7 +50,7 @@
                             <label for="">Origem:</label>
                             <select name="origem" class="span12">
                                 <option value="">Todas</option>
-                                <option value="os">Ordem de Serviço</option>
+<?php /*                                <option value="os">Ordem de Serviço</option> */ ?>
                                 <option value="venda">Venda</option>
                             </select>
                         </div>

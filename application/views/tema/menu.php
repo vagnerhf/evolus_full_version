@@ -61,7 +61,7 @@
                         </a>
                     </li>
                 <?php } ?>
-
+<?php /*
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vServico')) { ?>
                     <li class="<?php if (isset($menuServicos)) {
                         echo 'active';
@@ -72,7 +72,7 @@
                         </a>
                     </li>
                 <?php } ?>
-
+*/ ?>
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vVenda')) { ?>
                     <li class="<?php if (isset($menuVendas)) {
                         echo 'active';
@@ -83,7 +83,7 @@
                         </a>
                     </li>
                 <?php } ?>
-
+<?php /*
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vOs')) { ?>
                     <li class="<?php if (isset($menuOs)) {
                         echo 'active';
@@ -94,7 +94,7 @@
                         </a>
                     </li>
                 <?php } ?>
-
+*/ ?>
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vGarantia')) { ?>
                     <li class="<?php if (isset($menuGarantia)) {
                         echo 'active';

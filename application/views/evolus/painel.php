@@ -53,7 +53,7 @@
         </li>
     <?php endif ?>
 
-    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vServico')) : ?>
+    <?php /* if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vServico')) : ?>
         <li class="card">
             <a class="cardLink" href="<?= site_url('servicos') ?>">
                 <div class="grid-blak">
@@ -65,9 +65,9 @@
                 </div>
             </a>
         </li>
-    <?php endif ?>
+    <?php endif */?>
 
-    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vOs')) : ?>
+    <?php /* if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vOs')) : ?>
         <li class="card">
             <a class="cardLink" href="<?= site_url('os') ?>">
                 <div class="grid-blak">
@@ -79,7 +79,7 @@
                 </div>
             </a>
         </li>
-    <?php endif ?>
+    <?php endif */ ?>
 
     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vVenda')) : ?>
         <li class="card">
@@ -163,7 +163,7 @@
                             <div class="cardName">Produtos</div>
                         </div>
                     </a>
-
+<?php /*?>
                     <a href="<?php echo base_url() ?>index.php/servicos/adicionar" class="card tip-top" title="Adicionar serviços">
                         <div><i class='bx bxs-stopwatch iconBx3'></i></div>
                         <div>
@@ -179,7 +179,7 @@
                             <div class="cardName">Ordens</div>
                         </div>
                     </a>
-
+<?php */?>
                     <a href="<?php echo base_url(); ?>index.php/garantias" class="card tip-top" title="Adicionar garantia">
                         <div><i class='bx bxs-receipt iconBx6'></i></div>
                         <div>
@@ -479,6 +479,8 @@
 
 <!-- Start Staus OS -->
 <div class="span12A" style="margin-left: 0">
+
+<?php /*
     <div class="widget-box0 widbox-blak">
         <div>
             <h5 class="cardHeader">Ordens de Serviços Em Orçamento.</h5>
@@ -922,7 +924,7 @@
             </table>
         </div>
     </div>
-
+*/ ?>
     <div class="widget-box0 widbox-blak">
         <div>
             <h5 class="cardHeader">Status de Vendas</h5>
@@ -1151,6 +1153,7 @@
     </div>
 </div>
 
+<?php /*
 <!-- Modal Excluir Os -->
 <div id="modal-excluir-os" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <form action="<?php echo base_url() ?>index.php/os/excluir" method="post">
@@ -1168,7 +1171,7 @@
         </div>
     </form>
 </div>
-
+*/ ?>
 <!-- Modal Estoque -->
 <div id="atualizar-estoque" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <form action="<?php echo base_url() ?>index.php/produtos/atualizar_estoque" method="post" id="formEstoque">

@@ -52,6 +52,10 @@
                             <span class="button__icon"><i class='bx bx-qr'></i></span><span class="button__text">Chave PIX</span>
                         </a>
                     <?php endif ?>
+
+                    <a title="Enviar por E-mail" class="button btn btn-mini btn-success" href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional" target="_blank">
+                        <span class="button__icon"><i class="bx bx-envelope"></i></span> <span class="button__text">Emitir Nota Fiscal</span>
+                    </a>
                 </div>
             </div>
             <div class="widget-content" id="printOs">

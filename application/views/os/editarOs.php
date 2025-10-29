@@ -55,6 +55,9 @@
                     <a title="Enviar por E-mail" class="button btn btn-mini btn-warning" href="<?php echo site_url() ?>/os/enviar_email/<?php echo $result->idOs; ?>">
                         <span class="button__icon"><i class="bx bx-envelope"></i></span> <span class="button__text">Via E-mail</span>
                     </a>
+                    <a title="Enviar por E-mail" class="button btn btn-mini btn-success" href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional" target="_blank">
+                        <span class="button__icon"><i class="bx bx-envelope"></i></span> <span class="button__text">Emitir Nota Fiscal</span>
+                    </a>
                 </div>
             </div>
             <div class="widget-content nopadding tab-content">
@@ -62,7 +65,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active" id="tabDetalhes"><a href="#tab1" data-toggle="tab">Detalhes da OS</a></li>
                         <li id="tabDesconto"><a href="#tab2" data-toggle="tab">Desconto</a></li>
-                        <li id="tabProdutos"><a href="#tab3" data-toggle="tab">Produtos</a></li>
+ <?php /*                       <li id="tabProdutos"><a href="#tab3" data-toggle="tab">Produtos</a></li> */ ?>
                         <li id="tabServicos"><a href="#tab4" data-toggle="tab">Serviços</a></li>
                         <li id="tabAnexos"><a href="#tab5" data-toggle="tab">Anexos</a></li>
                         <li id="tabAnotacoes"><a href="#tab6" data-toggle="tab">Anotações</a></li>
@@ -185,7 +188,7 @@
                                 </form>
                             </div>
                         </div>
-
+<?php /*
                         <!--Produtos-->
                         <div class="tab-pane" id="tab3">
                             <div class="span12 well" style="padding: 1%; margin-left: 0">
@@ -257,7 +260,7 @@
                                 </div>
                             </div>
                         </div>
-
+*/ ?>
                         <!--Serviços-->
                         <div class="tab-pane" id="tab4">
                             <div class="span12 well" style="padding: 1%; margin-left: 0">

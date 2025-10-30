@@ -35,6 +35,10 @@
                             <span class="button__icon"><i class='bx bx-dollar'></i></span><span class="button__text">Gerar Pagamento</span>
                         </a>
 
+                        <a href="https://emissornfe.sebrae.com.br" id="btn-forma-pagamento" role="button" data-toggle="modal" class="button btn btn-mini btn-success" target="_blank">
+                            <span class="button__icon"><i class='bx bx-dollar'></i></span><span class="button__text">Emitir Nota Fiscal</span>
+                        </a>
+
                         <?php if ($qrCode): ?>
                             <a href="#modal-pix" id="btn-pix" role="button" data-toggle="modal" class="button btn btn-mini btn-info">
                                 <span class="button__icon"><i class='bx bx-qr'></i></span><span class="button__text">Chave PIX</span>

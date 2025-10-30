@@ -104,6 +104,11 @@
                                                 <span class="button__icon"><i class="bx bx-undo"></i></span>
                                                 <span class="button__text2">Voltar</span>
                                             </a>
+
+                                            <a href="https://emissornfe.sebrae.com.br" class="button btn btn-success" target="_blank">
+                                                <span class="button__icon"><i class="bx bx-undo"></i></span>
+                                                <span class="button__text2">Emitir Nota Fiscal</span>
+                                            </a>
                                         </div>
                                     </div>
                                 </form>
